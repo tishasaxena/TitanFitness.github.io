@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM Website</title>
+    <style>
+        /* CSS Reset */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Add this class to the link you want to trigger the smooth scroll */
+        .smooth-scroll {
+            cursor: pointer;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #section1 {
+            /* border: 0 solid black; */
+            width: 100%;
+            height: 700px;
+            background-image: url(bg1.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .left {
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 20%;
+            background-color: white;
+            display: inline-block;
+            position: absolute;
+            left: 10px;
+            top: 20px;
+            padding: 0;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            display: block;
+            margin: auto;
+        }
+
+        p {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            margin: 0px 5px 3px 5px;
+            text-align: center;
+        }
+
+        .mid {
+            background-color: white;
+            border-radius: 55px;
+            display: block;
+            width: 870px;
+            margin: auto;
+            position: fixed;
+            top: 20px;
+            left: 22%;
+            right: 25%;
+            overflow: auto;
+        }
+
+        li {
+            float: left;
+            list-style: none;
+            padding: 0px 0px 7px 0px;
+            margin-top: -10px;
+        }
+
+        li a {
+            border: 2px solid rgb(255, 255, 255);
+            padding: 0px 10px 0px 10px;
+            color: black;
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 20px;
+            text-decoration: none;
+            margin: 25px;
+        }
+
+        li a:hover {
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 0px 10px 0px 10px;
+        }
+
+        li a:active {
+            border: 2px solid black;
+            background-color: black;
+            border-radius: 20px;
+            color: white;
+            padding: 0px 10px 0px 10px;
+        }
+
+        .right {
+            display: inline-block;
+            position: fixed;
+            right: 17px;
+            top: 20px;
+        }
+
+        #btn {
+            font-size: 18px;
+            font-family: 'Archivo Black', sans-serif;
+            border: 4px solid black;
+            border-radius: 20px;
+            padding: 2px 15px 2px 15px;
+            cursor: pointer;
+        }
+
+        #btn:hover {
+            font-weight: bold;
+            border: 2px solid white;
+        }
+
+        #btn:active {
+            border: 3px solid black;
+            color: white;
+            background-color: black;
+        }
+
+        .countainer {
+            /* border: 1px solid white; */
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.85);
+            margin: 0px 0px 0px 40px;
+            padding: 180px 0px 25px 0px;
+            width: 600px;
+            height: 290px;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .countainer h1 b {
+            font-style: italic;
+        }
+
+        .countainer p {
+            font-style: italic;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        #btn1 {
+            border-radius: 15px;
+            float: right;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 2px 14px 2px 14px;
+            margin: 35px 45px 20px 0px;
+            cursor: pointer;
+        }
+
+        #btn1:hover {
+            font-weight: bold;
+        }
+
+        #btn1:active {
+            border: 3px solid black;
+            color: white;
+            background-color: black;
+        }
+
+        #section2 {
+            border: 0 solid black;
+            width: 100%px;
+            height: 700px;
+            background-image: url(bg2.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .c2 {
+            /* border: 0 solid white; */
+            color: rgb(255, 255, 255);
+            width: 600px;
+            padding: 0px 15px 15px 15px;
+            margin: 55px 90px 0px 0px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 30px;
+            float: right;
+        }
+
+        .c2 p {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 25px;
+        }
+
+        #section3 {
+            border: 0 solid black;
+            width: 100%px;
+            height: 700px;
+            background-image: url(bg3.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .c3 {
+            /* border: 0 solid white; */
+            color: rgb(255, 255, 255);
+            width: 500px;
+            padding: 0px 15px 15px 15px;
+            margin: 90px 0px 0px 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 30px;
+            float: left;
+        }
+
+        .c3 p {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 25px;
+            text-align: center;
+            padding: 0;
+        }
+
+        #section4 {
+            border: 0 solid black;
+            width: 100%px;
+            height: 700px;
+            background-image: url(bg4.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .c4 {
+            /* border: 0 solid white; */
+            color: rgb(255, 255, 255);
+            width: 650px;
+            padding: 0px 15px 15px 15px;
+            margin: 55px 85px 0px 0px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 30px;
+            float: right;
+        }
+
+        .c4 p {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 25px;
+            text-align: center;
+            padding: 0;
+        }
+
+        #section5 {
+            border: 0 solid black;
+            width: 100%px;
+            height: 700px;
+            background-image: url(bg5.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .c5 {
+            /* border: 3px solid white; */
+            color: rgb(255, 255, 255);
+            width: 850px;
+            padding: 0px 15px 15px 15px;
+            margin: 150px 0px 0px 350px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 30px;
+            float: left;
+        }
+
+        .c5 p {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 25px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .c5 span {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<body>
+
+    <div id="section1">
+        <header class="header">
+            <div class="left">
+                <img src="logo.png" alt="Error">
+                <p>Titan Fitness</p>
+            </div>
+            <div class="mid">
+                <ul>
+                    <li><a class="smooth-scroll" href="#section1" class="active">Home</a></li>
+                    <li><a class="smooth-scroll" href="#section2">About Us</a></li>
+                    <li><a class="smooth-scroll" href="#section3">Workouts</a></li>
+                    <li><a class="smooth-scroll" href="#section4">Diet</a></li>
+                    <li><a class="smooth-scroll" href="#section5">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <input type="button" id="btn" value="Apply Now">
+            </div>
+        </header>
+
+        <div class="countainer">
+            <h1>Welcome to <b>Titan Fitness</b> – Unleash Your Titan Within!</h1>
+            <p>At Tital Fitness, we believe in the power within you – the titan that's ready to rise, conquer, and
+                achieve
+                new heights of fitness. Our mission is to inspire and guide you on your journey to a healthier,
+                stronger,
+                and more vibrant lifestyle.</p>
+            <input type="button" id="btn1" value="Apply Now">
+        </div>
+    </div>
+
+    <div id="section2">
+        <div class="c2">
+            <h1>About Us</h1>
+            <p>At Titan Fitness, we're more than just a gym we're a community forged by the relentless pursuit of
+                strength, resilience, and personal triumph. Our mission is to empower every individual who steps through
+                our doors to discover the titan within themselves.
+                <br><br>
+                Founded on the principles of passion and commitment to well-being, Titan Fitness is a haven for those
+                seeking not only physical transformation but also a holistic approach to health. Our state-of-the-art
+                facilities, expert trainers, and diverse range of fitness programs are tailored to meet the unique needs
+                of every member.
+            </p>
+        </div>
+    </div>
+
+    <div id="section3">
+        <div class="c3">
+            <h1>Workouts</h1>
+            <p>Full Body Workout</p>
+            <p>Upper Body Strength</p>
+            <p>Lower Body Strength</p>
+            <p>Cardio and Endurance</p>
+            <p>Core and Stability</p>
+            <p>Functional Training</p>
+            <p>Flexibility and Mobility</p>
+        </div>
+    </div>
+
+    <div id="section4">
+        <div class="c4">
+            <h1>Diet</h1>
+            <p>
+                Fuel your fitness journey with a powerhouse diet! Elevate your energy levels and sculpt your body with
+                nutrient-packed meals. Indulge in protein-rich delights like grilled chicken, vibrant veggies, and
+                wholesome grains. Hydrate with the elixir of water, infusing every sip with vitality. Unleash the gym
+                warrior within, one delicious bite at a time!
+                <br><br>
+                From protein-rich morning boosts to recovery feasts, we've curated a culinary journey that complements
+                your fitness goals. Elevate your strength, stamina, and satisfaction with Titan Fitness – where
+                nourishment meets greatness!
+            </p>
+        </div>
+    </div>
+
+    <div id="section5">
+        <div class="c5">
+            <h1>Contact Us</h1>
+            <p>Phone no: &nbsp; 84XX-XXX-XX8</p>
+            <p>E-mail: &nbsp; titanfitness@gmail.com</p>
+            <p>Location: &nbsp; Titan Fitnes, Lal Chowk, Gandhinagar, Bhopal &nbsp;&nbsp; <span>(Pin: &nbsp; 302010)</span></p>
+        </div>
+    </div>
+</body>
+
+</html>
